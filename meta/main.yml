@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: Leon Kessler
+  description: Ansible role for installing Bundler
+  license: MIT
+  min_ansible_version: 1.4
+  platforms:
+    - Ubuntu 14.04
+  categories:
+    - development
+
+dependencies: []

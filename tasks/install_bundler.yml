@@ -1,0 +1,15 @@
+---
+- name: Install Bundler dependencies
+  apt: pkg={{ item }} state=present
+  with_items:
+      - ruby
+  sudo: yes
+
+- name: Install bundler
+  command: gem install bundler
+  sudo: yes
+
+- name: Running bundle install
+  when: bundler_gemfile_path is defined
+  command: bundle install --gemfile {{ bundler_gemfile_path }}
+  sudo: yes
